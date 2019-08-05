@@ -76,6 +76,17 @@ inputs:
       is_required: true
       value_options: []
 
+  - wtu_mailsender:
+    opts:
+      title: Email of the sender
+      is_expand: true
+      is_required: true
+
+  - wtu_mailreceiver:
+    opts:
+      title: One or more email separated by comma for receiver
+      is_required: true
+
 outputs:
   - EXAMPLE_STEP_OUTPUT:
     opts:
