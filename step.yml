@@ -50,55 +50,49 @@ is_skippable: false
 run_if: ""
 
 deps:
+  brew:
+  - name: git
+  - name: wget
+  apt_get:
+  - name: git
+  - name: wget
+
 
 toolkit:
   bash:
     entry_file: step.sh
 
+
 inputs:
-  # All parameter we need to upload files to wetransfer
+  - example_step_input: Default Value - you can leave this empty if you want to
+    opts:
+      title: "Example Step Input"
+      summary: Summary. No more than 2-3 sentences.
+      description: |
+        Description of this input.
+
+        Can be Markdown formatted text.
+      is_expand: true
+      is_required: true
+      value_options: []
+
   - wtu_mailsender:
     opts:
       title: Email of the sender
+      is_expand: true
       is_required: true
 
   - wtu_mailreceiver:
     opts:
-      title: One or more email separated by coma for receiver
+      title: One or more email separated by comma for receiver
       is_required: true
-
-  - wtu_filepath:
-    opts:
-      title: The path where are stored one or more files to upload
-      is_required: true
-
-  - wtu_message:
-    opts:
-      title: A little body for the mail
-      is_required: true
-
-  - wtu_language: "fr"
-    opts:
-      title: The language of the wetransfer receiver
-      is_required: true
-      value_options:
-        - "fr"
-        - "en"
-  # Debug mode desactivated by default
-  - wtu_debug_mode: "no"
-    opts:
-      title: "Debug mode ?"
-      description: |
-        Step prints additional debug information if this option
-        is enabled
-      is_required: true
-      value_options:
-        - "yes"
-        - "no"
 
 outputs:
-  # - WTU_SHORT_URL:
-  #  opts:
-  #    title: "This variable will contain the short URL to the file (s) to download."
-  #    summary:
-  #    description: |
+  - EXAMPLE_STEP_OUTPUT:
+    opts:
+      title: "Example Step Output"
+      summary: Summary. No more than 2-3 sentences.
+      description: |
+        Description of this output.
+
+        Can be Markdown formatted text.
