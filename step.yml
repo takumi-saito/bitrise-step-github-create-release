@@ -76,6 +76,26 @@ inputs:
       is_required: true
       value_options: []
 
+  - personal_api_token:
+    opts:
+      title: "Github Personal API Token"
+      description: API token for Github or Github Enterprise.
+      is_expand: true
+      is_required: true
+
+  - github_user_name:
+    opts:
+      title: "User Name"
+      description: Your Github User Name.
+      is_required: true
+
+  - repository_url: $GIT_REPOSITORY_URL
+    opts:
+      title: "Repository Url"
+      description: Your Github Repository Url.
+      is_required: true
+
+
 outputs:
   - EXAMPLE_STEP_OUTPUT:
     opts:
